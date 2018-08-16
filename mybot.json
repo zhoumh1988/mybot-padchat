@@ -1,0 +1,13 @@
+{
+    "apps" : [{
+      "name"        : "mybot",
+      "script"      : "./mybot.js",
+      "watch"       : true,
+      "env": {
+        "WECHATY_PUPPET": "padchat",
+        "WECHATY_PUPPET_PADCHAT_TOKEN": "{your-token}",
+        "WECHATY_LOG": "{'silent' | 'error' | 'warn' | 'info' | 'verbose' | 'silly'}",
+        "NODE_ENV": "development"
+      }
+    }]
+}

@@ -1,0 +1,15 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+database.sqlite
+node_modules
+ncp-debug.log
+npm-debug.log
+yarn-error.log
+.DS_Store
+.idea
+logs
+/dist
+down
+/SAFE_DIR/Application/Runtime
+package-lock.json
