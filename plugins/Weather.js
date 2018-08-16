@@ -1,4 +1,5 @@
 const request = require('request');
+const {WEATHER_KEY} = require('../config');
 
 const props = [];
 
@@ -59,7 +60,7 @@ class Weather {
     getWeatherByCity(cn, cb) {
         request.post(
             `https://free-api.heweather.com/s6/weather/now?${[
-                'key=4f6f62327bdf4ca994ec4d7a767c0ff7',
+                `key=${WEATHER_KEY}`,
                 `location=${encodeURIComponent(cn.toLocaleLowerCase())}`,
                 'lang=zh-cn'
             ].join('&')}`,
@@ -92,7 +93,7 @@ class Weather {
     getWeatheForecastByCity(cn, cb) {
         request.post(
             `https://free-api.heweather.com/s6/weather/forecast?${[
-                'key=4f6f62327bdf4ca994ec4d7a767c0ff7',
+                `key=${WEATHER_KEY}`,
                 `location=${encodeURIComponent(cn.toLocaleLowerCase())}`,
                 'lang=zh-cn'
             ].join('&')}`,

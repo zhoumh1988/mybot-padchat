@@ -1,15 +1,13 @@
 const request = require('request')
 const {err} = require('./Log')
+const {ROBOT_APIKEY} = require('../config')
 
 const option = {
     url: 'http://openapi.tuling123.com/openapi/api/v2',
     method: "POST",
     json: true
 }
-const userInfo = {
-    apiKey: '507874292e17473da89ef3b46d00cf31',
-    userId: 'a879f15d23a9b5f0'
-}
+
 const Robot = (content, cb) => {
     option.body = {
         reqType: 0,
@@ -18,7 +16,7 @@ const Robot = (content, cb) => {
                 "text": content
             }
         },
-        userInfo: userInfo
+        userInfo: ROBOT_APIKEY
     }
     request(option, (error, response, body) => {
         try{
